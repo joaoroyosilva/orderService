@@ -48,10 +48,10 @@
 
        <c:import url = "/view/helper/message.jsp"/>
       
-       <form class="form-signin" method="post" action="AuthenticateController?action=logon">
+       <form class="form-signin" method="post" action="#">
             <h2 class="form-signin-heading">Logon</h2>
-            <input type="text" class="input-block-level" placeholder="Email" name="email">
-            <input type="password" class="input-block-level" placeholder="Senha" name="password">
+                <input type="text" class="input-block-level" placeholder="Email" name="email" required>
+                <input type="password" class="input-block-level" placeholder="Senha" name="password" required>
                 <label class="checkbox">
                   <input type="checkbox" value="remember-me"> Lembrar me
                 </label>
