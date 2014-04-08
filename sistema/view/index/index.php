@@ -31,11 +31,11 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usuários <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="index.php?action=useradd.php">Novo Usuário</a></li>
-                <li><a href="index.php?action=userlist.php">Listar Usuários</a></li>
+                <li><a href="index.php?action=useradd">Novo Usuário</a></li>
+                <li><a href="index.php?action=userlist">Listar Usuários</a></li>
               </ul>
             </li>
-            <li><a href="#contact">Sobre</a></li>
+            <li><a href="index.php?action=about">Sobre</a></li>
             <li>  
                 <a href="../../index.php">Sair</a> 
             </li>
@@ -50,10 +50,12 @@
     <div class="container" id="container">
         
        <?php
-            if($container == "useradd.php"){
+            if($container == "useradd"){
                 include("../user/add.php");
-            }else if($container == "userlist.php"){
+            }else if($container == "userlist"){
                 include("../user/list.php");
+            }else if($container == "about"){
+                include("../about/about.php");
             }
         ?>
     </div>
