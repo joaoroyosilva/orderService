@@ -35,18 +35,6 @@
                 <li><a href="index.php?action=userlist.php">Listar Usuários</a></li>
               </ul>
             </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Controle de Acesso <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="ProfileController?action=add">Novo Perfil</a></li>
-                <li><a href="ProfileController?action=list">Listar Perfils</a></li>
-                <li><a href="ActionController?action=add">Nova Ação</a></li>
-                <li><a href="ActionController?action=list">Listar Ações</a></li>
-                <li><a href="ModuleController?action=add">Novo Módulo</a></li>
-                <li><a href="ModuleController?action=list">Listar Módulos</a></li>
-                <li><a href="PermissionController?action=permission">Permissões</a></li>
-              </ul>
-            </li>
             <li><a href="#contact">Sobre</a></li>
             <li>  
                 <a href="../../index.php">Sair</a> 
