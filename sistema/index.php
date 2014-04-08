@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="view/bootstrap/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 40px;
@@ -59,7 +59,7 @@
       </form>
     </div> <!-- /container -->
 
-    <script src="bootstrap/js/jquery.js"></script>
+    <script src="view/bootstrap/js/jquery.js"></script>
   </body>
 </html>
     
