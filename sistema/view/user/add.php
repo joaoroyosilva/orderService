@@ -6,7 +6,7 @@
     </ul>
     <h1>Cadastro de Usuários</h1>
 </div>
-<form class="form-horizontal" action="UserController?action=add" method="post">
+<form class="form-horizontal" action="#" method="post">
 
     <div class="form-group">
       <label for="name" class="col-lg-2 control-label">Nome</label>

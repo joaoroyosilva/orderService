@@ -7,5 +7,4 @@
 </div>
 <div>
     Sistema desenvolvido para a disciplina de APSOO.
-
 </div>

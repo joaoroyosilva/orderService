@@ -17,11 +17,6 @@
      <div class="navbar  navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
           <a class="navbar-brand" href="index.php">OrderService  
           </a>
         </div>
@@ -33,6 +28,21 @@
               <ul class="dropdown-menu">
                 <li><a href="index.php?action=useradd">Novo Usuário</a></li>
                 <li><a href="index.php?action=userlist">Listar Usuários</a></li>
+              </ul>
+            </li>
+            <!-- Somente será exibido se o usuário for administrador -->  
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Soluções/Produtos <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Cadastrar Solução/Produto</a></li>
+                <li><a href="#">Listar Soluções/Produtos</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Chamados <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="index.php?action=calladd">Novo Chamado</a></li>
+                <li><a href="#">Listar Chamados</a></li>
               </ul>
             </li>
             <li><a href="index.php?action=about">Sobre</a></li>
@@ -56,6 +66,8 @@
                 include("../user/list.php");
             }else if($container == "about"){
                 include("../about/about.php");
+            }else if($container == "calladd"){
+                include("../call/add.php");
             }
         ?>
     </div>

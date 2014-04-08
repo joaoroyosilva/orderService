@@ -48,6 +48,7 @@ html {
 
 body {
   margin: 0;
+  overflow-y: hidden;
 }
 
 a:focus {
@@ -206,6 +207,7 @@ input::-moz-focus-inner {
 textarea {
   overflow: auto;
   vertical-align: top;
+  resize: none;
 }
 
 table {
