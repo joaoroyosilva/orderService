@@ -14,7 +14,7 @@
       <?php
         $container = $_REQUEST["action"];
        ?>
-     <div class="navbar  navbar-fixed-top">
+     <div class="navbar navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="index.php">OrderService  
@@ -42,7 +42,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Chamados <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="index.php?action=calladd">Novo Chamado</a></li>
-                <li><a href="#">Listar Chamados</a></li>
+                <li><a href="index.php?action=calllist">Listar Chamados</a></li>
               </ul>
             </li>
             <li><a href="index.php?action=about">Sobre</a></li>
@@ -68,6 +68,8 @@
                 include("../about/about.php");
             }else if($container == "calladd"){
                 include("../call/add.php");
+            }else if($container == "calllist"){
+                include("../call/list.php");
             }
         ?>
     </div>

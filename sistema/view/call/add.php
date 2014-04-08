@@ -4,10 +4,9 @@
         <li><a href="index.php?action=calllist">Chamados</a> <span class="divider"></span></li>
         <li class="active">Novo Chamado</li>
     </ul>
-    <h1>Cadastro de Chamado</h1>
+    <h1>Abertura de Chamado</h1>
 </div>
 <form class="form-horizontal" action="#" method="post">
-
     <div class="form-group">
       <label for="problem" class="col-lg-2 control-label">Problema</label>
       <div class="col-lg-10">
