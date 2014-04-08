@@ -9,9 +9,9 @@
 <form class="form-horizontal" action="#" method="post">
 
     <div class="form-group">
-      <label for="name" class="col-lg-2 control-label">Problema</label>
+      <label for="problem" class="col-lg-2 control-label">Problema</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" id="name" placeholder="Nome" name="name" required>
+        <input type="text" class="form-control" id="problem" placeholder="Problema" name="problem" required>
       </div>
     </div>
     <div class="form-group">
