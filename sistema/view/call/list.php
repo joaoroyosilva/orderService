@@ -1,8 +1,7 @@
 <div class="page-header">
     <ul class="breadcrumb">
         <li><a href="index.php">Início</a> <span class="divider"></span></li>
-        <li><a href="index.php?action=calllist">Chamados</a> <span class="divider"></span></li>
-        <li class="active">Novo Chamado</li>
+        <li class="active">Chamados</li>
     </ul>
     <h1>Lista de Chamados</h1>
 </div>

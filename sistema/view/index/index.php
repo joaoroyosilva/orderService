@@ -7,8 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">  
-    <style> body { padding-top: 60px; } </style>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">  
+    <style> 
+        body { padding-top: 60px; overflow-y: scroll;} 
+        .navbar-fixed-top,
+        .navbar-fixed-bottom { background-color: white;}
+    </style>
   </head>
   <body>
       <?php

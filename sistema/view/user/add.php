@@ -26,6 +26,16 @@
         <input type="email" class="form-control" id="email" placeholder="E-mail" name="email" required>
       </div>
     </div>
+      <div class="form-group">
+      <label for="solution" class="col-lg-2 control-label">Tipo</label>
+      <div class="col-lg-10">
+    <select class="btn dropdown-toggle">
+        <option value="Tecnico">Técnico</option>
+        <option value="Administrador">Administrador</option>
+        <option value="Cliente">Cliente</option>
+    </select>
+    </div>
+    </div>
     <div class="form-group">
       <label for="active" class="col-lg-2 control-label">Ativo</label>
       <div class="col-lg-10">
