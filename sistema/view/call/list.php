@@ -20,7 +20,7 @@
     <div>
         <b>Problema:</b> Computador não conecta no servidor.
     </div>
-    <a class="btn btn-primary" href="#" ><i class="glyphicon glyphicon-file"></i> Atender</a>
+    <a class="btn btn-primary" href="index.php?action=calling" ><i class="glyphicon glyphicon-file"></i> Atender</a>
 </div>
 <div class="alert alert-danger">
     <div>
@@ -35,7 +35,7 @@
     <div>
         <b>Problema:</b> Sistema não abre.
     </div>
-    <a class="btn btn-primary" href="#" ><i class="glyphicon glyphicon-file"></i>  Atender</a>
+    <a class="btn btn-primary" href="index.php?action=calling" ><i class="glyphicon glyphicon-file"></i>  Atender</a>
 </div>
 <div class="alert alert-success">
     <div>
@@ -50,6 +50,6 @@
     <div>
         <b>Problema:</b> Impressora sem comunicação.
     </div>
-    <a class="btn btn-primary disabled" href="#" ><i class="glyphicon glyphicon-ok"></i> Atendido</a>
+    <a class="btn btn-primary disabled" href="index.php?action=calling" ><i class="glyphicon glyphicon-ok"></i> Atendido</a>
 </div>
 </div>

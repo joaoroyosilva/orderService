@@ -4812,6 +4812,10 @@ textarea.input-group-sm > .input-group-btn > .btn {
   border-radius: .25em;
 }
 
+.label-campo{
+  font-stretch: semi-condensed;
+}
+
 .label[href]:hover,
 .label[href]:focus {
   color: #ffffff;
