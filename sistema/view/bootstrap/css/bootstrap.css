@@ -48,7 +48,7 @@ html {
 
 body {
   margin: 0;
-  overflow-y: hidden;
+  overflow-y: scroll;
 }
 
 a:focus {
@@ -207,7 +207,6 @@ input::-moz-focus-inner {
 textarea {
   overflow: auto;
   vertical-align: top;
-  resize: none;
 }
 
 table {
@@ -4163,6 +4162,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   right: 0;
   left: 0;
   border-width: 0 0 1px;
+  background-color: white;    
 }
 
 @media (min-width: 768px) {
@@ -5052,6 +5052,12 @@ a.thumbnail:focus {
 
 .alert-info .alert-link {
   color: #2d6987;
+}
+
+.alert-warning {
+  color: #c09853;
+  background-color: #fcf8e3;
+  border-color: #fbeed5;
 }
 
 .alert-warning {
