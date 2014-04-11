@@ -15,6 +15,9 @@
         <b>Abertura:</b> 24/04/2014 - 15:00
     </div>
     <div>
+        <b>Data e hora preferencial:</b> 24/04/2014 - 17:00
+    </div>
+    <div>
         <b>Cliente:</b> Lojas Center Car
     </div>
     <div>
@@ -30,6 +33,9 @@
         <b>Abertura:</b> 03/04/2014 - 15:00
     </div>
     <div>
+        <b>Data e hora preferencial:</b> 04/04/2014 - 09:00
+    </div>
+    <div>
         <b>Cliente:</b> Advocacia Toledo
     </div>
     <div>
@@ -43,6 +49,9 @@
     </div>
     <div>
         <b>Abertura:</b> 04/04/2014 - 15:00
+    </div>
+    <div>
+        <b>Data e hora preferencial:</b> 04/04/2014 - 12:00
     </div>
     <div>
         <b>Cliente:</b> Farmácia Santa Elena

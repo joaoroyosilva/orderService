@@ -16,7 +16,7 @@
     <div class="form-group">
       <label for="preffereddate" class="col-lg-2 control-label">Data preferencial</label>  
       <div class="col-lg-2">
-        <input type="date" class="form-control" id="preffereddate" name="preffereddate" required />
+        <input type="date" class="form-control" id="preffereddate" name="preffereddate" />
       </div>
     </div>
     <div class="form-group">
