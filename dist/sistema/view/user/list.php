@@ -1,8 +1,7 @@
 <div class="page-header">
     <ul class="breadcrumb">
         <li><a href="index.php">Início</a> <span class="divider"></span></li>
-        <li><a href="index.php?action=userlist">Usuários</a> <span class="divider"></span></li>
-        <li class="active">Novo Usuário</li>
+        <li class="active">Usuários</li>
     </ul>
     <h1>Listagem de Usuários</h1>
 </div>

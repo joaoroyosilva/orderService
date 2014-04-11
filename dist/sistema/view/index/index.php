@@ -38,8 +38,8 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Soluções/Produtos <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Cadastrar Solução/Produto</a></li>
-                <li><a href="#">Listar Soluções/Produtos</a></li>
+                <li><a href="index.php?action=solutionadd">Cadastrar Solução/Produto</a></li>
+                <li><a href="index.php?action=solutionlist">Listar Soluções/Produtos</a></li>
               </ul>
             </li>
             <li class="dropdown">
@@ -74,8 +74,12 @@
                 include("../call/add.php");
             }else if($container == "calllist"){
                 include("../call/list.php");
-            }else if($container == "view"){
+            }else if($container == "callview"){
                 include("../call/view.php");
+            }else if($container == "solutionadd"){
+                include("../solution/add.php");
+            }else if($container == "solutionlist"){
+                include("../solution/list.php");
             }
         ?>
     </div>
