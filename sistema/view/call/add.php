@@ -14,6 +14,24 @@
       </div>
     </div>
     <div class="form-group">
+      <label for="preffereddate" class="col-lg-2 control-label">Data preferencial</label>  
+      <div class="col-lg-2">
+        <input type="date" class="form-control" id="preffereddate" name="preffereddate" required />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="prefferedhour" class="col-lg-2 control-label">Horário preferencial</label>
+      <div class="col-lg-2">
+        <input type="time" class="form-control" name="prefferedhour" id="prefferedhour" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="problem" class="col-lg-2 control-label">Problema</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="problem" placeholder="Problema" name="problem" required>
+      </div>
+    </div>
+    <div class="form-group">
       <label for="solution" class="col-lg-2 control-label">Solução/Produto</label>
       <div class="col-lg-10">
         <select class="btn dropdown-toggle">
