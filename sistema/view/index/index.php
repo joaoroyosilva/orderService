@@ -74,8 +74,8 @@
                 include("../call/add.php");
             }else if($container == "calllist"){
                 include("../call/list.php");
-            }else if($container == "calling"){
-                include("../call/calling.php");
+            }else if($container == "view"){
+                include("../call/view.php");
             }
         ?>
     </div>
