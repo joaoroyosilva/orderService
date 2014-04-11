@@ -8,7 +8,7 @@
 </div>
 <form class="form-horizontal" action="#" method="post">
     <div class="form-group">
-      <label for="problem" class="col-lg-2 control-label">Problema</label>
+      <label for="problem" class="col-lg-2 control-label">Problema*</label>
       <div class="col-lg-10">
         <input type="text" class="form-control" id="problem" placeholder="Problema" name="problem" required>
       </div>
@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="form-group">
-      <label for="problem" class="col-lg-2 control-label">Problema</label>
+      <label for="problem" class="col-lg-2 control-label">Problema*</label>
       <div class="col-lg-10">
         <input type="text" class="form-control" id="problem" placeholder="Problema" name="problem" required>
       </div>
@@ -43,7 +43,7 @@
       </div>
     </div>
     <div class="form-group">
-      <label for="description" class="col-lg-2 control-label">Descrição</label>
+      <label for="description" class="col-lg-2 control-label">Descrição*</label>
       <div class="col-lg-10">
         <textarea rows="10" class="form-control" id="description" placeholder="Descreva o problema... " name="description" required></textarea>
       </div>

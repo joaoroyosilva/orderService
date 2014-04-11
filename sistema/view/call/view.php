@@ -28,13 +28,13 @@
 <h2>Dados do atendimento</h2>
 <form class="form-horizontal" action="#" method="post">
     <div class="form-group">
-      <label for="cause" class="col-lg-2 control-label">Causa</label>
+      <label for="cause" class="col-lg-2 control-label">Causa*</label>
       <div class="col-lg-10">
         <textarea rows="6" class="form-control" id="cause" placeholder="Informe a causa do problema" name="cause" required></textarea>
       </div>
     </div>
     <div class="form-group">
-      <label for="solution" class="col-lg-2 control-label">Solução</label>
+      <label for="solution" class="col-lg-2 control-label">Solução*</label>
       <div class="col-lg-10">
         <textarea rows="6" class="form-control" id="solution" placeholder="Descreva a solução do problema" name="solution" required></textarea>
       </div>
