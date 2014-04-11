@@ -23,7 +23,7 @@
     <div>
         <b>Problema:</b> Computador não conecta no servidor.
     </div>
-    <a class="btn btn-primary" href="index.php?action=view" ><i class="glyphicon glyphicon-file"></i> Atender</a>
+    <a class="btn btn-primary" href="index.php?action=callview" ><i class="glyphicon glyphicon-file"></i> Atender</a>
 </div>
 <div class="alert alert-danger">
     <div>

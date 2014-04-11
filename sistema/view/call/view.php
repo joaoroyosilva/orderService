@@ -1,6 +1,7 @@
 <div class="page-header">
     <ul class="breadcrumb">
         <li><a href="index.php">Início</a> <span class="divider"></span></li>
+        <li><a href="index.php?action=calllist">Chamados</a> <span class="divider"></span></li>
         <li class="active">Chamado</li>
     </ul>
     <h1>Chamado: #</h1>
@@ -28,7 +29,7 @@
 <h2>Dados do atendimento</h2>
 <form class="form-horizontal" action="#" method="post">
     <div class="form-group">
-      <label for="cause" class="col-lg-2 control-label">Causa*</label>
+      <label for="cause" class="col-lg-2 control-label">Causa*s</label>
       <div class="col-lg-10">
         <textarea rows="6" class="form-control" id="cause" placeholder="Informe a causa do problema" name="cause" required></textarea>
       </div>
