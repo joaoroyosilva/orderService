@@ -3,7 +3,7 @@
     Created on : May 1, 2014, 12:50:17 PM
     Author     : jroyo
 --%>
-
+<%@ include file="../validasession.jsp" %> 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
@@ -38,6 +38,13 @@
                             <ul class="dropdown-menu">
                                 <li><a href="UserController?action=add">Novo Usuário</a></li>
                                 <li><a href="UserController?action=list">Listar Usuários</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Empresas<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="UserController?action=add">Nova Empresa</a></li>
+                                <li><a href="UserController?action=list">Listar Empresas</a></li>
                             </ul>
                         </li>
                         <!-- Somente será exibido se o usuário for administrador -->  

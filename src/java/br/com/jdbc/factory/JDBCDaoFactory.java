@@ -2,10 +2,12 @@
 package br.com.jdbc.factory;
 
 import br.com.Dao.AuthenticateDao;
+import br.com.Dao.CorporateDao;
 import br.com.Dao.DaoFactory;
-import br.com.Dao.UserDao;
 import br.com.Dao.GenericDao;
 import br.com.Dao.ProfileDao;
+import br.com.Dao.UserDao;
+import br.com.model.Corporate;
 import br.com.model.Profile;
 import br.com.model.User;
 import br.com.util.ConnectionFactory;
@@ -49,6 +51,11 @@ public class JDBCDaoFactory extends DaoFactory{
     public AuthenticateDao getAuthenticateDao() 
     {
         return new AuthenticateDao(this.connection);
+    }
+
+    @Override
+    public GenericDao<Corporate> getCorporateDao() {
+        return new CorporateDao(this.connection);
     }
 
 

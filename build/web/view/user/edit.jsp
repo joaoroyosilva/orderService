@@ -29,7 +29,7 @@
         <div class="col-lg-3">
             <select id="profile" name="profile" class="form-control">
                 <c:forEach items="${profiles}" var="profile">
-                    <option value="<c:out value="${profile.getId()}"/>" <c:if test="${profile.getId() == user.getProfile()}"> selected="selected" /> </c:if> 
+                    <option value="<c:out value="${profile.getId()}"/>" <c:if test="${profile.getId() == user.getProfile()}"> selected="selected"  </c:if> />
                             <c:out value="${profile.getName()}" />
                     </option>
                 </c:forEach>

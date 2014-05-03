@@ -32,7 +32,6 @@
                     [<a href="UserController?action=edit&id=<c:out value="${user.getId()}" />">Editar</a>]
                     [<a href="UserController?action=delete&id=<c:out value="${user.getId()}" />">Excluir</a>]
                     [<a href="UserController?action=password&id=<c:out value="${user.getId()}" />">Alterar Senha</a>]
-                    [<a href="#">Permissões</a>]
                 </td>
             </tr>
       </c:forEach>

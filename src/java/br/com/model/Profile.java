@@ -19,7 +19,7 @@ public class Profile {
     private String description;
     
     private boolean active;
-    private ArrayList<Module> modules;
+ 
     
     
 
@@ -61,23 +61,6 @@ public class Profile {
         this.active = active;
     } 
 
-     public void setModules(ArrayList<Module> modules) {
-        this.modules = modules;
-    }
      
-    public boolean moduleExists(int key) 
-    {
-        for(Module module : this.getModules())
-        {
-            if(module.getId() == key)
-                return true;
-        }
-        return false;
-    }
-
-   public ArrayList<Module> getModules() {
-        return this.modules;
-    }
-
     
 }

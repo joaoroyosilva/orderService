@@ -4,7 +4,6 @@ package br.com.business;
 import br.com.Dao.DaoFactory;
 import br.com.Dao.GenericDao;
 import br.com.model.Profile;
-import br.com.model.User;
 import java.util.ArrayList;
 
 /**

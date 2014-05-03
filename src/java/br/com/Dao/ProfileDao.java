@@ -1,6 +1,5 @@
 package br.com.Dao;
 
-import br.com.model.Module;
 import br.com.model.Profile;
 import br.com.model.User;
 import java.sql.Connection;
@@ -35,15 +34,7 @@ public class ProfileDao implements GenericDao<Profile> {
 
             id.next();
 
-            int lastId = id.getInt(1);
-
-            for (Module module : profile.getModules()) {
-                String sqlAux = "INSERT INTO profile_module (module,profile) VALUES ('" + module.getId() + "','" + lastId + "')";
-
-                PreparedStatement stmtAux = this.connection.prepareStatement(sqlAux);
-
-                stmtAux.executeUpdate();
-            }
+     
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -117,15 +108,7 @@ public class ProfileDao implements GenericDao<Profile> {
 
             stmtDel.executeUpdate();
 
-            for (Module module : profile.getModules()) {
-
-
-                String sqlAux = "INSERT INTO profile_module (profile,module) VALUES ('" + profile.getId() + "','" + module.getId() + "')";
-
-                PreparedStatement stmtAux = this.connection.prepareStatement(sqlAux);
-
-                stmtAux.executeUpdate();
-            }
+           
         } catch (SQLException e) {
             e.printStackTrace();
         }
