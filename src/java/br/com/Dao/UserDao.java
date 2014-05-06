@@ -136,7 +136,7 @@ public class UserDao implements GenericDao<User>
 
         try
         {
-           String sql = "SELECT * FROM userdb";
+           String sql = "SELECT * FROM userdb order by id asc";
            
           Statement stmt = this.connection.createStatement();
            

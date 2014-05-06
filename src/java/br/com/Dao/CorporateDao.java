@@ -44,8 +44,27 @@ public class CorporateDao implements GenericDao<Corporate> {
 
     @Override
     public void update(Corporate obj) {
-        
-    
+        try {
+            String sql = "UPDATE corporates SET corporatename='"+obj.getCorporatename()+"',"
+                    + "fantasyname='"+obj.getFantasyname()+"',"
+                    + "cnpj='"+obj.getCnpj()+"',"
+                    + "ie='"+obj.getIe()+"',"
+                    + "address='"+obj.getAddress()+"',"
+                    + "num='"+obj.getNum()+"',"
+                    + "phone='"+obj.getPhone()+"',"
+                    + "phone2='"+obj.getPhone2()+"',"
+                    + "contact='"+obj.getContact()+"',"
+                    + "city='"+obj.getCity()+"',"
+                    + "uf='"+obj.getUf()+"',"
+                    + "active='"+obj.getActive()+"' where id="+obj.getId();
+
+            PreparedStatement stmt = this.connection.prepareStatement(sql);
+
+            System.out.println(stmt.toString());
+            stmt.executeUpdate();
+        }catch(SQLException e){
+            e.getStackTrace();
+        }
     }
 
     @Override
@@ -68,7 +87,7 @@ public class CorporateDao implements GenericDao<Corporate> {
     @Override
     public ArrayList<Corporate> list() {
         try {
-            String sql = "SELECT * FROM corporates";
+            String sql = "SELECT * FROM corporates order by id asc";
 
             Statement stmt = this.connection.createStatement();
 
