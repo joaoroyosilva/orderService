@@ -26,7 +26,7 @@
         <c:forEach items="${corporates}" var="corporate">
             <tr>
                 <td><c:out value="${corporate.getId()}" /></td>
-                <td><a href="#"><c:out value="${corporate.getCorporatename()}" /></a></td>
+                <td><a href="CorporateController?action=edit&id=<c:out value="${corporate.getId()}" />"><c:out value="${corporate.getCorporatename()}" /></a></td>
                 <td><c:out value="${corporate.getFantasyname()}" /></td>
                 <td><c:out value="${corporate.getCnpj()}" /></td>
                 <td><c:out value="${corporate.getPhone()}" /></td>

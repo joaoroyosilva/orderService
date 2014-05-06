@@ -41,6 +41,8 @@ public class CorporateController extends HttpServlet {
 
         String id = request.getParameter("id");
         
+        Corporate corporate;
+        
         switch (action) {
             case "add":
 
@@ -49,6 +51,10 @@ public class CorporateController extends HttpServlet {
                 break;
 
             case "edit":
+
+                corporate = corporateBo.getCorporate(Integer.parseInt(id));
+
+                request.setAttribute("corporate", corporate);
 
                 forward = EDIT;
 
@@ -138,7 +144,7 @@ public class CorporateController extends HttpServlet {
 
                     boolean active = request.getParameter("active") != null ? true : false;
 
-                    corporate = new Corporate(coporatename, fantasyname, cnpj, ie, address, num, phone2, phone2, contact, city, uf, active);
+                    corporate = new Corporate(coporatename, fantasyname, cnpj, ie, address, num, phone1, phone2, contact, city, uf, active);
 
                     if (id == null || id.isEmpty()) {
                         corporateBo.insertCorporate(corporate);

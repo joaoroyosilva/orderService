@@ -30,99 +30,137 @@ public class CorporateDao implements GenericDao<Corporate> {
     public void save(Corporate obj) {
         try {
             String sql = "INSERT INTO corporates (corporatename,fantasyname,cnpj,ie,address,num,phone,phone2,contact,city,uf,active)VALUES('"
-                    + obj.getCorporatename()+"','"+obj.getFantasyname()+"','"+obj.getCnpj()+"','"
-                    + obj.getIe()+"','"+obj.getAddress()+"','"+obj.getNum()+"','"+obj.getPhone()+"','"+obj.getPhone2()+"','"
-                    + obj.getContact()+"','"+obj.getCity()+"','"+obj.getUf()+"','"+obj.getActive()+"');";
-            
+                    + obj.getCorporatename() + "','" + obj.getFantasyname() + "','" + obj.getCnpj() + "','"
+                    + obj.getIe() + "','" + obj.getAddress() + "','" + obj.getNum() + "','" + obj.getPhone() + "','" + obj.getPhone2() + "','"
+                    + obj.getContact() + "','" + obj.getCity() + "','" + obj.getUf() + "','" + obj.getActive() + "');";
+
             PreparedStatement stmt = this.connection.prepareStatement(sql);
 
             stmt.executeUpdate();
         } catch (SQLException e) {
-           System.out.println(e.getMessage());
+            System.out.println(e.getMessage());
         }
     }
 
     @Override
     public void update(Corporate obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+    
     }
 
     @Override
     public Boolean delete(int id) {
-         try
-        {
-           String sql = "DELETE FROM corporates WHERE id = '" + id + "'";
-           
-           Statement stmt = this.connection.createStatement();
-           
-           stmt.executeQuery(sql); 
-           
-           return true;
-          
+        try {
+            String sql = "DELETE FROM corporates WHERE id = '" + id + "'";
+
+            Statement stmt = this.connection.createStatement();
+
+            stmt.executeQuery(sql);
+
+            return true;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        catch (SQLException e)
-        {
-           e.printStackTrace();
-        } 
         return false;
     }
 
     @Override
     public ArrayList<Corporate> list() {
-  try
-        {
-           String sql = "SELECT * FROM corporates";
-           
-          Statement stmt = this.connection.createStatement();
-           
-           ArrayList<Corporate> corporates = new ArrayList<> ();
-           
-           ResultSet rs = stmt.executeQuery(sql);
-           
-           while(rs.next())
-           {      
-               Corporate corporate = new Corporate();
-               
-               corporate.setCorporatename(rs.getString("corporatename"));
-               
-               corporate.setFantasyname(rs.getString("fantasyname"));
-               
-               corporate.setCnpj(rs.getString("cnpj"));
-               
-               corporate.setIe((rs.getString("ie")));
-               
-               corporate.setAddress(rs.getString("address"));
-               
-               corporate.setNum(rs.getString("num"));
-               
-               corporate.setPhone(rs.getString("phone"));
-               
-               corporate.setPhone(rs.getString("phone2"));
-               
-               corporate.setContact(rs.getString("contact"));
-               
-               corporate.setCity(rs.getString("city"));
-               
-               corporate.setUf(rs.getString("uf"));
-              
-               corporate.setActive(rs.getBoolean("active"));
-               
-               corporate.setId(rs.getInt("id"));
-              
-               corporates.add(corporate);
-           }
-           
-           return corporates;
+        try {
+            String sql = "SELECT * FROM corporates";
+
+            Statement stmt = this.connection.createStatement();
+
+            ArrayList<Corporate> corporates = new ArrayList<>();
+
+            ResultSet rs = stmt.executeQuery(sql);
+
+            while (rs.next()) {
+                Corporate corporate = new Corporate();
+
+                corporate.setCorporatename(rs.getString("corporatename"));
+
+                corporate.setFantasyname(rs.getString("fantasyname"));
+
+                corporate.setCnpj(rs.getString("cnpj"));
+
+                corporate.setIe((rs.getString("ie")));
+
+                corporate.setAddress(rs.getString("address"));
+
+                corporate.setNum(rs.getString("num"));
+
+                corporate.setPhone(rs.getString("phone"));
+
+                corporate.setPhone2(rs.getString("phone2"));
+
+                corporate.setContact(rs.getString("contact"));
+
+                corporate.setCity(rs.getString("city"));
+
+                corporate.setUf(rs.getString("uf"));
+
+                corporate.setActive(rs.getBoolean("active"));
+
+                corporate.setId(rs.getInt("id"));
+
+                corporates.add(corporate);
+            }
+
+            return corporates;
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        catch (SQLException e)
-        {
-           e.printStackTrace();
-        } 
-        return null; }
+        return null;
+    }
 
     @Override
     public Corporate getById(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+            String sql = "SELECT * FROM corporates where id=" + id;
+
+            Statement stmt = this.connection.createStatement();
+
+            ResultSet rs = stmt.executeQuery(sql);
+
+            Corporate corporate = new Corporate();
+
+            while (rs.next()) {
+
+                corporate.setCorporatename(rs.getString("corporatename"));
+
+                corporate.setFantasyname(rs.getString("fantasyname"));
+
+                corporate.setCnpj(rs.getString("cnpj"));
+
+                corporate.setIe((rs.getString("ie")));
+
+                corporate.setAddress(rs.getString("address"));
+
+                corporate.setNum(rs.getString("num"));
+
+                corporate.setPhone(rs.getString("phone"));
+
+                corporate.setPhone2(rs.getString("phone2"));
+
+                corporate.setContact(rs.getString("contact"));
+
+                corporate.setCity(rs.getString("city"));
+
+                corporate.setUf(rs.getString("uf"));
+
+                corporate.setActive(rs.getBoolean("active"));
+
+                corporate.setId(rs.getInt("id"));
+
+            }
+
+            return corporate;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     @Override
