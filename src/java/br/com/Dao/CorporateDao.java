@@ -9,7 +9,9 @@ import br.com.model.Corporate;
 import br.com.model.User;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 /**
@@ -27,16 +29,16 @@ public class CorporateDao implements GenericDao<Corporate> {
     @Override
     public void save(Corporate obj) {
         try {
-            String sql = "INSERT INTO companies (corporatename,fantasyname,cnpj,ie,adress,num,phone,contact,city,uf)VALUES('"
+            String sql = "INSERT INTO corporates (corporatename,fantasyname,cnpj,ie,address,num,phone,phone2,contact,city,uf,active)VALUES('"
                     + obj.getCorporatename()+"','"+obj.getFantasyname()+"','"+obj.getCnpj()+"','"
-                    + obj.getIe()+"','"+obj.getAddress()+"','"+obj.getNum()+"','"+obj.getPhone()+"','"
-                    + obj.getContact()+"','"+obj.getCity()+"','"+obj.getUf()+"';";
+                    + obj.getIe()+"','"+obj.getAddress()+"','"+obj.getNum()+"','"+obj.getPhone()+"','"+obj.getPhone2()+"','"
+                    + obj.getContact()+"','"+obj.getCity()+"','"+obj.getUf()+"','"+obj.getActive()+"');";
             
             PreparedStatement stmt = this.connection.prepareStatement(sql);
 
             stmt.executeUpdate();
         } catch (SQLException e) {
-            e.getStackTrace();
+           System.out.println(e.getMessage());
         }
     }
 
@@ -52,8 +54,56 @@ public class CorporateDao implements GenericDao<Corporate> {
 
     @Override
     public ArrayList<Corporate> list() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+  try
+        {
+           String sql = "SELECT * FROM corporates";
+           
+          Statement stmt = this.connection.createStatement();
+           
+           ArrayList<Corporate> corporates = new ArrayList<> ();
+           
+           ResultSet rs = stmt.executeQuery(sql);
+           
+           while(rs.next())
+           {      
+               Corporate corporate = new Corporate();
+               
+               corporate.setCorporatename(rs.getString("corporatename"));
+               
+               corporate.setFantasyname(rs.getString("fantasyname"));
+               
+               corporate.setCnpj(rs.getString("cnpj"));
+               
+               corporate.setIe((rs.getString("ie")));
+               
+               corporate.setAddress(rs.getString("address"));
+               
+               corporate.setNum(rs.getString("num"));
+               
+               corporate.setPhone(rs.getString("phone"));
+               
+               corporate.setPhone(rs.getString("phone2"));
+               
+               corporate.setContact(rs.getString("contact"));
+               
+               corporate.setCity(rs.getString("city"));
+               
+               corporate.setUf(rs.getString("uf"));
+              
+               corporate.setActive(rs.getBoolean("active"));
+               
+               corporate.setId(rs.getInt("id"));
+              
+               corporates.add(corporate);
+           }
+           
+           return corporates;
+        }
+        catch (SQLException e)
+        {
+           e.printStackTrace();
+        } 
+        return null; }
 
     @Override
     public Corporate getById(int id) {

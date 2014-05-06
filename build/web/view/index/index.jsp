@@ -43,8 +43,8 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Empresas<b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="UserController?action=add">Nova Empresa</a></li>
-                                <li><a href="UserController?action=list">Listar Empresas</a></li>
+                                <li><a href="CorporateController?action=add">Nova Empresa</a></li>
+                                <li><a href="CorporateController?action=list">Listar Empresas</a></li>
                             </ul>
                         </li>
                         <!-- Somente será exibido se o usuário for administrador -->  
