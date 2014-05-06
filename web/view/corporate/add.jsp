@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <div class="page-header">
     <ul class="breadcrumb">
-        <li><a href="index.php">Início</a> <span class="divider"></span></li>
+        <li><a href="#">Home</a> <span class="divider"></span></li>
         <li><a href="#">Empresas</a> <span class="divider"></span></li>
         <li class="active">Nova Empresa</li>
     </ul>
@@ -48,7 +48,7 @@
         <input type="text" class="form-control" id="phone" placeholder="Telefone 1" name="phone1" required>
       </div>
       <div class="col-lg-5">
-        <input type="text" class="form-control" id="phone" placeholder="Telefone 2" name="phone2" required>
+        <input type="text" class="form-control" id="phone" placeholder="Telefone 2" name="phone2">
       </div>
     </div>
     <div class="form-group">

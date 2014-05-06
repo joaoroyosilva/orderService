@@ -6,7 +6,6 @@
 package br.com.controller;
 
 import br.com.business.CorporateBO;
-import br.com.business.ProfileBO;
 import br.com.model.Corporate;
 import br.com.util.Message;
 import java.io.IOException;
@@ -40,6 +39,8 @@ public class CorporateController extends HttpServlet {
 
         String action = request.getParameter("action");
 
+        String id = request.getParameter("id");
+        
         switch (action) {
             case "add":
 
@@ -60,6 +61,12 @@ public class CorporateController extends HttpServlet {
                 break;
 
             case "delete":
+
+                corporateBo.deleteCorporate(Integer.parseInt(id));
+                
+                message.addMessage("Empressa apagada com sucesso!");
+                
+                request.setAttribute("corporates", corporateBo.getAllCorporates());
 
                 break;
 
@@ -89,6 +96,8 @@ public class CorporateController extends HttpServlet {
             throws ServletException, IOException {
         Message message = Message.singleton();
 
+        request.setCharacterEncoding("UTF-8");
+        
         Corporate corporate;
 
         String forward = "";

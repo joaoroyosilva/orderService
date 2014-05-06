@@ -3,7 +3,6 @@ package br.com.controller;
 import br.com.business.ProfileBO;
 import br.com.business.UserBO;
 import br.com.model.User;
-import br.com.util.Md5;
 import br.com.util.Message;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -13,7 +12,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -110,6 +108,8 @@ public class UserController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
     {
         Message message = Message.singleton();
+        
+        request.setCharacterEncoding("UTF-8");
         
         User user;
 

@@ -44,7 +44,7 @@
     </div>
     <div class="form-group">
         <div class="col-lg-offset-2 col-lg-10">
-            <button type="submit" class="btn btn-default" name="save">Salvar</button>
+            <button type="submit" class="btn btn-primary" name="save">Salvar</button>
         </div>
     </div>
 </form>

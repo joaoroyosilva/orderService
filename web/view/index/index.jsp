@@ -47,7 +47,6 @@
                                 <li><a href="CorporateController?action=list">Listar Empresas</a></li>
                             </ul>
                         </li>
-                        <!-- Somente será exibido se o usuário for administrador -->  
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Soluções/Produtos <b class="caret"></b></a>
                             <ul class="dropdown-menu">

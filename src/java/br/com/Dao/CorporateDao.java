@@ -49,7 +49,22 @@ public class CorporateDao implements GenericDao<Corporate> {
 
     @Override
     public Boolean delete(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         try
+        {
+           String sql = "DELETE FROM corporates WHERE id = '" + id + "'";
+           
+           Statement stmt = this.connection.createStatement();
+           
+           stmt.executeQuery(sql); 
+           
+           return true;
+          
+        }
+        catch (SQLException e)
+        {
+           e.printStackTrace();
+        } 
+        return false;
     }
 
     @Override
