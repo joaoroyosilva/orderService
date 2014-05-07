@@ -4,6 +4,7 @@ package br.com.Dao;
 import br.com.jdbc.factory.JDBCDaoFactory;
 import br.com.model.Corporate;
 import br.com.model.Profile;
+import br.com.model.Solution;
 import br.com.model.User;
 
 /**
@@ -23,4 +24,6 @@ public abstract class DaoFactory {
     public abstract AuthenticateDao getAuthenticateDao();
 
     public abstract GenericDao<Corporate> getCorporateDao();
+
+    public abstract GenericDao<Solution> getSolutionDao();
 }

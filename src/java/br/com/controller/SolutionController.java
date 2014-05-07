@@ -5,8 +5,8 @@
  */
 package br.com.controller;
 
-import br.com.business.CorporateBO;
-import br.com.model.Corporate;
+import br.com.business.SolutionBO;
+import br.com.model.Solution;
 import br.com.util.Message;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -21,11 +21,11 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author jroyo
  */
-public class CorporateController extends HttpServlet {
+public class SolutionController extends HttpServlet {
 
-    private static String LIST = "/view/corporate/list.jsp";
-    private static String ADD = "/view/corporate/add.jsp";
-    private static String EDIT = "/view/corporate/edit.jsp";
+    private static String LIST = "/view/solution/list.jsp";
+    private static String ADD = "/view/solution/add.jsp";
+    private static String EDIT = "/view/solution/edit.jsp";
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -33,16 +33,16 @@ public class CorporateController extends HttpServlet {
 
         Message message = Message.singleton();
 
-        CorporateBO corporateBo = new CorporateBO();
+        SolutionBO solutionBo = new SolutionBO();
 
         String forward = LIST;
 
         String action = request.getParameter("action");
 
         String id = request.getParameter("id");
-        
-        Corporate corporate;
-        
+
+        Solution solution;
+
         switch (action) {
             case "add":
 
@@ -52,9 +52,9 @@ public class CorporateController extends HttpServlet {
 
             case "edit":
 
-                corporate = corporateBo.getCorporate(Integer.parseInt(id));
+                solution = solutionBo.getSolution(Integer.parseInt(id));
 
-                request.setAttribute("corporate", corporate);
+                request.setAttribute("solution", solution);
 
                 forward = EDIT;
 
@@ -62,17 +62,17 @@ public class CorporateController extends HttpServlet {
 
             case "list":
 
-                request.setAttribute("corporates", corporateBo.getAllCorporates());
+                request.setAttribute("solutions", solutionBo.getAllSolutions());
 
                 break;
 
             case "delete":
 
-                corporateBo.deleteCorporate(Integer.parseInt(id));
-                
-                message.addMessage("Empresa apagada com sucesso!");
-                
-                request.setAttribute("corporates", corporateBo.getAllCorporates());
+                solutionBo.deleteSolution(Integer.parseInt(id));
+
+                message.addMessage("Solução apagada com sucesso!");
+
+                request.setAttribute("solutions", solutionBo.getAllSolutions());
 
                 break;
 
@@ -103,8 +103,8 @@ public class CorporateController extends HttpServlet {
         Message message = Message.singleton();
 
         request.setCharacterEncoding("UTF-8");
-        
-        Corporate corporate;
+
+        Solution solution;
 
         String forward = "";
 
@@ -112,7 +112,7 @@ public class CorporateController extends HttpServlet {
 
         String id = request.getParameter("id");
 
-        CorporateBO corporateBo = new CorporateBO();
+        SolutionBO solutionBo = new SolutionBO();
 
         try {
             switch (action) {
@@ -120,45 +120,27 @@ public class CorporateController extends HttpServlet {
 
                 case "edit":
 
-                    String coporatename = request.getParameter("corporatename");
+                    String name = request.getParameter("name");
 
-                    String fantasyname = request.getParameter("fantasyname");
-
-                    String cnpj = request.getParameter("cnpj");
-
-                    String ie = request.getParameter("ie");
-
-                    String address = request.getParameter("address");
-
-                    String num = request.getParameter("num");
-
-                    String phone1 = request.getParameter("phone1");
-
-                    String phone2 = request.getParameter("phone2");
-
-                    String contact = request.getParameter("contact");
-
-                    String city = request.getParameter("city");
-
-                    String uf = request.getParameter("uf");
+                    String description = request.getParameter("description");
 
                     boolean active = request.getParameter("active") != null ? true : false;
 
-                    corporate = new Corporate(coporatename, fantasyname, cnpj, ie, address, num, phone1, phone2, contact, city, uf, active);
+                    solution = new Solution(name, description, active);
 
                     if (id == null || id.isEmpty()) {
-                        corporateBo.insertCorporate(corporate);
+                        solutionBo.insertSolution(solution);
 
-                        message.addMessage("Empresa adicionada com sucesso!");
+                        message.addMessage("Solução adicionada com sucesso!");
                     } else {
-                        corporate.setId(Integer.parseInt(id));
+                        solution.setId(Integer.parseInt(id));
 
-                        corporateBo.updateCorporate(corporate);
+                        solutionBo.updateSolution(solution);
 
-                        message.addMessage("Empresa atualizada com sucesso!");
+                        message.addMessage("Solução atualizada com sucesso!");
                     }
 
-                    request.setAttribute("corporates", corporateBo.getAllCorporates());
+                    request.setAttribute("solutions", solutionBo.getAllSolutions());
 
                     forward = LIST;
 

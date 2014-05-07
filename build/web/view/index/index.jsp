@@ -50,8 +50,8 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Soluções/Produtos <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="index.jsp?action=solutionadd">Cadastrar Solução/Produto</a></li>
-                                <li><a href="index.jsp?action=solutionlist">Listar Soluções/Produtos</a></li>
+                                <li><a href="SolutionController?action=add">Cadastrar Solução/Produto</a></li>
+                                <li><a href="SolutionController?action=list">Listar Soluções/Produtos</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">

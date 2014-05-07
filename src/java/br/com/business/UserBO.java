@@ -2,7 +2,6 @@ package br.com.business;
 
 import br.com.Dao.DaoFactory;
 import br.com.Dao.GenericDao;
-import br.com.Dao.UserDao;
 import br.com.model.User;
 import br.com.util.Md5;
 import java.util.ArrayList;
