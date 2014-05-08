@@ -15,13 +15,13 @@
     <div class="form-group">
         <label for="name" class="col-lg-2 control-label">Nome</label>
         <div class="col-lg-10">
-            <input type="text" class="form-control" id="name" placeholder="Nome" name="name">
+            <input type="text" class="form-control" id="name" placeholder="Nome" name="name" required>
         </div>
     </div>
     <div class="form-group">
         <label for="description" class="col-lg-2 control-label">Descrição</label>
         <div class="col-lg-10">
-            <textarea rows="4" class="form-control" id="description" placeholder="Descreva a solução/produto... " name="description"></textarea>
+            <textarea rows="4" class="form-control" id="description" placeholder="Descreva a solução/produto... " name="description" required=""></textarea>
         </div>
     </div>
     <div class="form-group">

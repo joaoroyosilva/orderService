@@ -33,7 +33,6 @@
     <div class="form-group">
         <div class="col-lg-offset-2 col-lg-10">
             <button type="submit" class="btn btn-primary" name="save">Salvar</button>
-            <button type="reset" class="btn btn-default" name="save">Limpar</button>
         </div>
     </div>
 </form>
