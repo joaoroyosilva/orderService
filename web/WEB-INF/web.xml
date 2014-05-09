@@ -16,6 +16,10 @@
         <servlet-name>SolutionController</servlet-name>
         <servlet-class>br.com.controller.SolutionController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CallController</servlet-name>
+        <servlet-class>br.com.controller.CallController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AuthenticateController</servlet-name>
         <url-pattern>/AuthenticateController</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>SolutionController</servlet-name>
         <url-pattern>/SolutionController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CallController</servlet-name>
+        <url-pattern>/CallController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
